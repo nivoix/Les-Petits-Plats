@@ -1,0 +1,49 @@
+*, ::after, ::before{
+  box-sizing: border-box;
+}
+header {
+  height: 61vw;
+    display: block;
+    background-image: url(../assets/backgroundHeader.png);
+    background-repeat: no-repeat;
+}
+.logo {
+  padding: 5vw 0 0 5vw;
+    width: 34vw;
+    height: 8vw;
+    margin-bottom: 8vw;
+}
+.title {
+  margin: 0;
+    width: 100%;
+    display: flex;
+    color: #FFD15B;
+    font-family: 'anton', sans-serif;
+    font-size: 4vw;
+    padding-bottom: 1vw;
+    justify-content: center;
+}
+.searchbar {
+  display: flex;
+    margin: 0;
+    margin-top: 3vw;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    justify-content: center;
+}
+
+.saisie {
+  background-image: url(../assets/loupe.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    padding: 0;
+    font-size: 3vw;
+    width: 70%;
+    border: transparent;
+    border-radius: 10px;
+    height: 5vw;
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+}
