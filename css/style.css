@@ -1,10 +1,16 @@
 *, ::after, ::before{
   box-sizing: border-box;
 }
+.row, .col{
+  margin: 0;
+  padding: 0;
+}
+
 header {
-  height: 61vw;
+  height: 47vw;
     display: block;
     background-image: url(../assets/backgroundHeader.png);
+    background-size: contain;
     background-repeat: no-repeat;
 }
 .logo {
@@ -26,24 +32,65 @@ header {
 .searchbar {
   display: flex;
     margin: 0;
-    margin-top: 3vw;
-    position: relative;
-    width: 100%;
-    background-color: transparent;
-    justify-content: center;
+    margin-inline: auto;
+    margin-top: 1vw;
+    padding-inline-start: 1vw;
+    border-radius: 1vw;
+    height: 5vw;
+    width: 74%;
+    background-color: white;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-content: center;
+    align-items: center;
+}
+.containLoupe {
+  display: contents;
+    width: 1%;
+    padding: 0;
+}
+.loupe {
+  background-color: white;
+    border-radius: 1vw;
+    color: inherit;
+    width: 5vw;
+    height: 5vw;
 }
 
 .saisie {
-  background-image: url(../assets/loupe.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    padding: 0;
+  padding: 0;
     font-size: 3vw;
-    width: 70%;
-    border: transparent;
+    width: 85%;
+    border: 0;
+    outline: none;
     border-radius: 10px;
     height: 5vw;
-    margin-top: 3vw;
+    margin-top: 5vw;
     margin-bottom: 5vw;
+}
+
+/***********************************************************/
+main {
+  top: -9px;
+    position: relative;
+    padding-top: 24px;
+    background-color: #E5E5E5;
+}
+.optionsFiltre, .displayOptionFiltre {
+  display: flex;
+    gap: 5%;
+    width: 60%;
+    height: 60px;
+    align-items: center;
+}
+.option {
+  font-family: 'manrope', sans-serif;
+  font-size: 16px;
+  display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 1vw;
+    height: 50px;
+    align-items: center;
+    border: none;
 }

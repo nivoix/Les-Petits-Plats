@@ -1,4 +1,4 @@
-[
+const recettes = [
   {
       "id": 1,
       "image": "Recette01.jpg",
@@ -25,7 +25,7 @@
               "unit" : "grammes"
           },
           {
-              "ingredient": "Glaçons"
+              "ingredient": "Glaçon"
           }
       ],
       "time": 10,
@@ -40,7 +40,7 @@
       "servings": 2,
       "ingredients": [
           {
-              "ingredient" : "Thon Rouge (ou blanc)",
+              "ingredient" : "Thon rouge (ou blanc)",
               "quantity" : 200,
               "unit" : "grammes"
           },
@@ -57,11 +57,11 @@
               "quantity" : 1
           },
           {
-              "ingredient" : "Citron Vert",
+              "ingredient" : "Citron vert",
               "quantity" : 5
           },
           {
-              "ingredient" : "Lait de Coco",
+              "ingredient" : "Lait de coco",
               "quantity" : 100,
               "unit" : "ml"
           }
@@ -70,7 +70,8 @@
       "description": "Découper le thon en dés, mettre dans un plat et recouvrir de jus de citron vert (mieux vaut prendre un plat large et peu profond). Laisser reposer au réfrigérateur au moins 2 heures. (Si possible faites-le le soir pour le lendemain. Après avoir laissé mariner le poisson, coupez le concombre en fines rondelles sans la peau et les tomates en prenant soin de retirer les pépins. Rayer la carotte. Ajouter les légumes au poisson avec le citron cette fois ci dans un Saladier. Ajouter le lait de coco. Pour ajouter un peu plus de saveur vous pouvez ajouter 1 à 2 cuillères à soupe de Crème de coco",
       "appliance": "Saladier",
       "ustensils": ["presse citron"]
-  },{
+  },
+  {
       "id": 3,
       "image": "Recette03.jpg",
       "name": "Poulet coco réunionnais",
@@ -211,7 +212,7 @@
               "unit": "cl"
           },
           {
-              "ingredient": "Sucre en Poudre",
+              "ingredient": "Sucre",
               "quantity": 100,
               "unit":"grammes"
           },
@@ -286,12 +287,12 @@
               "quantity": 2
          },
          {
-             "ingredient": "Sucre en Poudre",
+             "ingredient": "Sucre en poudre",
              "quantity": "110",
              "unit": "grammes"
          },
          {
-              "ingredient": "farine",
+              "ingredient": "Farine",
               "quantity": 90,
               "unit": "grammes"
          }
@@ -313,7 +314,7 @@
               "quantity": 1
           },
           {
-              "ingredient": "Olives"
+              "ingredient": "Olive"
           },
           {
               "ingredient": "Fromage de chèvre",
@@ -321,7 +322,7 @@
               "unit": "grammes"
           },
           {
-              "ingredient": "Vinaigre Balsamique"
+              "ingredient": "Vinaigre balsamique"
           },
           {
               "ingredient": "Huile d'olive"
@@ -377,7 +378,7 @@
       "servings": 4,
       "ingredients":[
           {
-              "ingredient": "Tomates cerises",
+              "ingredient": "Tomate cerise",
               "quantity": 250,
               "unit": "grammes"
           },
@@ -392,7 +393,7 @@
               "unit": "tranches"
           }, 
           {
-              "ingredient": "Pommes",
+              "ingredient": "Pomme",
               "quantity": 1
           },
           {
@@ -421,7 +422,7 @@
               "unit": "grammes"
           },
           {
-              "ingredient": "Pommes",
+              "ingredient": "Pomme",
               "quantity": 8
           },
           {
@@ -575,7 +576,7 @@
               "unit": "grammes"
           },
           {
-              "ingredient": "Pennes",
+              "ingredient": "Penne",
               "quantity": 500,
               "unit": "grammes"
           },
@@ -585,7 +586,7 @@
               "unit": "tiges"
           },
           {
-              "ingredient": "huile d'olives",
+              "ingredient": "huile d'olive",
               "quantity": 2,
               "unit": "cuillère à soupe"
           }
@@ -616,7 +617,7 @@
               "unit": "cuillères à soupe"
           },
           {
-              "ingredient": "Glaçons",
+              "ingredient": "Glaçon",
               "quantity": 8
           },
           {
@@ -695,12 +696,12 @@
       "servings": 5,
       "ingredients": [
           {
-              "ingredient": "Tagliatelles",
+              "ingredient": "Tagliatelle",
               "quantity": 500,
               "unit": "grammes"
           },
           {
-              "ingredient": "Lardons",
+              "ingredient": "Lardon",
               "quantity": 150,
               "unit": "grammes"
           },
@@ -814,7 +815,7 @@
               "unit": "grammes"
           },
           {
-              "ingredient": "Lardons",
+              "ingredient": "Lardon",
               "quantity": 200,
               "unit": "grammes"
           },
@@ -934,7 +935,7 @@
               "quantity": 1
           },
           {
-              "ingredient": "Huile d'olives"
+              "ingredient": "Huile d'olive"
           },
           {
               "ingredient": "Oignon",
@@ -971,7 +972,7 @@
               "unit": "cuillère à soupe"
           },
           {
-              "ingredient": "Vermicelles",
+              "ingredient": "Vermicelle",
               "quantity": 1,
               "unit": "verres"
           },
@@ -1029,7 +1030,7 @@
       "servings": 2,
       "ingredients": [
           {
-              "ingredient": "Pois chiches",
+              "ingredient": "Pois chiche",
               "quantity": 1,
               "unit": "boites"
           },
@@ -1095,7 +1096,7 @@
               "quantity": 2
           },
           {
-              "ingredient": "Haricots verts",
+              "ingredient": "Haricot vert",
               "quantity": 150,
               "unit": "grammes"
           },
@@ -1105,7 +1106,7 @@
               "unit": "grammes"
           },
           {
-              "ingredient": "Lardons",
+              "ingredient": "Lardon",
               "quantity": 150,
               "unit": "grammes"
           }
@@ -1282,7 +1283,7 @@
               "unit": "cl"
           },
           {
-              "ingredient": "Lasagnes",
+              "ingredient": "Lasagne",
               "quantity": 5,
               "unit": "feuilles"
           },
@@ -1318,7 +1319,7 @@
               "unit": "grammes"
           },
           {
-              "ingredient": "Huile d'olives",
+              "ingredient": "Huile d'olive",
               "quantity": 25,
               "unit": "cl"
           },
@@ -1327,7 +1328,7 @@
               "quantity": 1
           },
           {
-              "ingredient": "Coulis de tomates",
+              "ingredient": "Coulis de tomate",
               "quantity": 20,
               "unit": "cl"
           },
@@ -1417,11 +1418,11 @@
               "unit": "Litres"
           },
           {
-              "ingredient": "Citron Vert",
+              "ingredient": "Citron vert",
               "quantity": 3
           },
           {
-              "ingredient": "Sucre en poudre",
+              "ingredient": "Sucre",
               "quantity": 4,
               "unit": "cuillères à café"
           },
@@ -1483,7 +1484,7 @@
               "unit" : "boites"
           },
           {
-              "ingredient": "Boudoirs",
+              "ingredient": "Boudoir",
               "quantity": 15
           }
       ],
@@ -1553,7 +1554,7 @@
               "unit": "grammes"
           },
           {
-              "ingredient": "farine",
+              "ingredient": "Farine",
               "quantity": 40,
               "unit": "grammes"
           }
@@ -1678,17 +1679,17 @@
               "quantity": 1
           },
           {
-              "ingredient": "Tomates pelées",
+              "ingredient": "Tomate pelée",
               "quantity": 1,
               "unit": "boites"
           },
           {
-              "ingredient": "Lardons",
+              "ingredient": "Lardon",
               "quantity": 1,
               "unit": "barquettes"
           },
           {
-              "ingredient": "Champignons de paris",
+              "ingredient": "Champignon de paris",
               "quantity": 1,
               "unit": "boites"
           },
@@ -1710,11 +1711,11 @@
       "servings": 4,
       "ingredients": [
           {
-              "ingredient": "Bananes",
+              "ingredient": "Banane",
               "quantity": 2
           },
           {
-              "ingredient": "Kiwis",
+              "ingredient": "Kiwi",
               "quantity": 3
           },
           {
@@ -1774,3 +1775,4 @@
       "ustensils": ["rouleau à pâtisserie", "fouet"]
   }
 ]
+export { recettes }
