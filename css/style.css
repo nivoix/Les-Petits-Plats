@@ -71,26 +71,65 @@ header {
 
 /***********************************************************/
 main {
-  top: -9px;
+  top: -2vw;
     position: relative;
     padding-top: 24px;
+    height: 80vw;
     background-color: #E5E5E5;
 }
-.optionsFiltre, .displayOptionFiltre {
+.optionsFiltre {
   display: flex;
-    gap: 5%;
-    width: 60%;
-    height: 60px;
-    align-items: center;
+    gap: 11%;
+    width: 69vw;
+    height: 13vw;
+    margin-top: 1vw;
+    margin-inline-start: 6vw;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 .option {
   font-family: 'manrope', sans-serif;
-  font-size: 16px;
-  display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 1vw;
-    height: 50px;
+    /* font-size: 5px; */
+    display: flex;
+    width: 23%;
+    background-color: transparent;
+    /* border-radius: 1vw; */
+    height: 9vw;
+    /* border: none; */
+    justify-content: center;
+    padding-inline: 12px;
     align-items: center;
-    border: none;
+}
+/* .accordion-header{
+  width: 100%;
+} */
+.accordion-button {
+  padding-inline: 0;
+    font-size: 3.75vw;
+    width: 24vw;
+    height: 9vw;
+    border-radius: 10px;
+}
+.accordion-button::after{
+  background-size: 3vw;
+  /* font-size: 0vw; */
+  height: 3vw;
+  width: 3vw;
+}
+.accordion-body {
+  width: 100%;
+    background-color: white;
+    margin-inline-start: 3vw;
+}
+#ingredients, #appareils, #ustensils {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#collapseOne, #collapseTwo, #collapseThree {
+  width: 24vw;
+}
+#contentIngredients, #contentAppareils, #contentUstensils {
+  margin: 0;
+  padding: 0;
 }
