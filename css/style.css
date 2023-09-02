@@ -115,7 +115,7 @@ main {
 .accordion-button:not(.collapsed) {
   background-color: white;
 }
-#ingredients, #appareils, #ustensils {
+#Ingredient, #Appareils, #Ustensils {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -153,7 +153,7 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-#searchIngredients, #searchAppareils, #searchUstensils {
+#searchIngredient, #searchAppareils, #searchUstensils {
   padding: 0;
   font-size: 2vw;
   width: 82%;

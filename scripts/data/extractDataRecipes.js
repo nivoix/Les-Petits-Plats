@@ -15,11 +15,21 @@ function createUniqueArray(array, value, arrayContainsObjects) {
   } return array
 }
 
-let ustensils = createUniqueArray(recettes, "ustensils", true)
-let appareils = createUniqueArray(recettes, "appliance", true)
+let Ustensils = createUniqueArray(recettes, "ustensils", true)
+let Appareils = createUniqueArray(recettes, "appliance", true)
 let ingredients = createUniqueArray(recettes, "ingredients", false)
-let ingredient = createUniqueArray(ingredients, "ingredient", true)
+let Ingredient = createUniqueArray(ingredients, "ingredient", true)
 
-export { ustensils }
-export { appareils }
-export { ingredient }
+function ToLowerCase(properties) {
+  properties.forEach(element => {
+    properties.push(element.toLowerCase())
+  });
+  return properties
+}
+ToLowerCase(Ustensils)
+ToLowerCase(Appareils)
+ToLowerCase(Ingredient)
+
+export { Ustensils }
+export { Appareils }
+export { Ingredient }
