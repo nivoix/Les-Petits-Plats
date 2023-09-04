@@ -14,3 +14,21 @@ function liste(value) {
   return {createListe}
 }
 export { liste }
+
+function createSelectTagCard(value) {
+
+  function createCardTag() {
+    const card = document.createElement('li')
+    const close = document.createElement('span')
+    card.classList.add("tagSelected")
+    card.textContent = value
+    card.id = value
+    card.style.backgroundColor = '#FFD15B'
+    card.style.color = 'black'
+    close.className ='close'
+    card.appendChild(close)
+    return card
+  }
+  return {createCardTag}
+}
+export { createSelectTagCard }

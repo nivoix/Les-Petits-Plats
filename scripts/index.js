@@ -3,6 +3,7 @@ import { Ingredient } from "./data/extractDataRecipes.js";
 import { Ustensils } from "./data/extractDataRecipes.js";
 import { Appareils } from "./data/extractDataRecipes.js";
 import { filterListeTag } from "./utils/filterTags.js";
+import { chooseTag } from "./utils/filterTags.js";
 
 const app = () => {
 
@@ -12,21 +13,23 @@ const app = () => {
     const inputSearchProperties = document.querySelectorAll('.searchProperties')
     const selectTag = document.querySelectorAll('.option')
 
+    //afficher la liste complète des éléments d'une propriété
     selectTag.forEach((tag) => {
         tag.addEventListener('click', ()  => {
             if(tag.id =='Ingredient'){
-                console.log("je suis ingredient");
-                createListeProperties(Ingredient, listeIngredient, "Ingredient")
+                createListeProperties(Ingredient, listeIngredient)
+                chooseTag("Ingredient")
             }else if (tag.id =='Ustensils'){
-                console.log("je suis Ustensils");
-                createListeProperties(Ustensils, listeUstensils, "Ustensils")
+                createListeProperties(Ustensils, listeUstensils)
+                chooseTag("Ustensils")
             } else if (tag.id =='Appareils'){
-                console.log("je suis Appareils");
-                createListeProperties(Appareils, listeAppareils, "Appareils")
+                createListeProperties(Appareils, listeAppareils)
+                chooseTag("Appareils")
             }
         })
     })
 
+    // faire le trie d'une liste en fonction de la saisie de l'input
     inputSearchProperties.forEach((inputSearch) => {
         inputSearch.addEventListener("click", (e) => {
             if(inputSearch.id.includes('Ingredient')){
