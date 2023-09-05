@@ -15,19 +15,28 @@ const app = () => {
     const inputSearchProperties = document.querySelectorAll('.searchProperties')
     const selectTag = document.querySelectorAll('.option')
     const areaCard = document.querySelector('.carteRecette')
-    //afficher la liste complète des éléments d'une propriété
+
+    //afficher la liste complète des éléments d'une propriété (=tag)
     selectTag.forEach((tag) => {
         tag.addEventListener('click', ()  => {
-            if(tag.id =='Ingredient'){
+            if(tag.id =='Ingredient' && [listeIngredient][0].children.length === 0){
                 createListeProperties(Ingredient, listeIngredient)
-                chooseTag("Ingredient")
-            }else if (tag.id =='Ustensils'){
+                
+            }else if (tag.id =='Ustensils' && [listeUstensils][0].children.length === 0){
                 createListeProperties(Ustensils, listeUstensils)
-                chooseTag("Ustensils")
-            } else if (tag.id =='Appareils'){
+                
+            } else if (tag.id =='Appareils' && [listeAppareils][0].children.length === 0){
                 createListeProperties(Appareils, listeAppareils)
-                chooseTag("Appareils")
+                
             }
+        })
+    })
+
+    // choisir un élément de la liste sans recours au filtre
+    const itemListeSelected = document.querySelectorAll('.choiceProperties')
+    itemListeSelected.forEach((el) => {
+        el.addEventListener('click', (e) => {
+            chooseTag(el.id.substring(5), e.target.textContent)
         })
     })
 
@@ -46,7 +55,10 @@ const app = () => {
             }
         })
     })
-    //afficher les cartes des recettes
+    const nbRecettes = document.querySelector('.nbRecettes')
+    nbRecettes.textContent = recettes.length +' '+ 'Recettes'
+    console.log(recettes.length);
+    //afficher toutes les cartes des recettes
     createAllCardRecette(recettes, areaCard)
 }
 app()

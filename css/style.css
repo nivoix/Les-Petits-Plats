@@ -75,14 +75,22 @@ main {
   top: -2vw;
   position: relative;
   padding-top: 24px;
-  height: 80vw;
+  height: auto;
   background-color: #E5E5E5;
 }
 /*************************TAGS**********************************/
 .ligneTags {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
+  height: auto;
+  align-items: center;
+}
+.nbRecettes {
+  font-weight: 400;
+  font-family: anton;
+  padding-inline-end: 2vw;
+  font-size: 3vw;
 }
 .accordion-header:hover, .accordion-header:focus, #accordionExample, --bs-accordion-border-color, .accordion-header {
   border-color: transparent;
@@ -92,12 +100,12 @@ main {
   display: flex;
   gap: 8%;
   width: 63vw;
-  height: 6vw;
+  height: auto;
   margin-top: 1vw;
   margin-inline-start: 6vw;
   justify-content: space-around;
   align-items: flex-start;
-  border-color: transparent;
+  
 }
 .accordion-button {
   padding-inline: 1vw;
@@ -128,8 +136,9 @@ main {
   font-family: 'manrope', sans-serif;
   padding-inline: 0;
   width: 23%;
-  height: 4vw;
+  height: auto;
   align-items: center;
+  background-color: transparent;
 }
 #collapseOne, #collapseTwo, #collapseThree {
   width: 21vw;
@@ -188,16 +197,9 @@ main {
 .valueListe:hover{
   background-color: #FFD15B;
 }
-.nbRecettes {
-  font-weight: 400;
-  font-family: anton;
-  padding-top: 1vw;
-  padding-inline-end: 2vw;
-  font-size: 3vw;
-}
 .elementSelected {
   width: 143%;
-  height: 6vw;
+  height: auto;
 }
 .listElementSelectedOfIngredient, .listElementSelectedOfAppareils, .listElementSelectedOfUstensils {
   display: flex;
@@ -228,4 +230,84 @@ main {
   width: 2vw;
   height: 2vw;
   cursor: pointer;
+}
+/************************************Card Recette**********************************/
+
+.carteRecette {
+  display: flex;
+  gap: 2%;
+  width: 90%;
+  margin-inline: auto;
+}
+.cardRecette {
+  margin-top: 0;
+  width: 32%;
+  padding-inline: 0;
+  border-radius: 2vw;
+  margin-bottom: 25px;
+}
+.imgRecette {
+  height: 253px;
+  object-fit: cover;
+  border-radius: 2vw 2vw 0 0;
+}
+.nameRecette {
+  font-family: 'Anton';
+  font-size: 18px;
+  font-weight: 400;
+  margin: 10px 0 20px 0;
+}
+.titreInfo {
+  font-family: 'Manrope';
+  font-size: 12px;
+  font-weight: 700;
+}
+#titreInfo {
+  color: #7A7A7A;
+}
+.infoDetail {
+  font-family: 'Manrope';
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.contenuDetail {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+.alimentQty {
+  margin-top: 10px;
+  padding-inline: 0;
+  border: none;
+  width: auto;
+  min-width: 147px;
+}
+.aliment {
+font-family: 'Manrope';
+font-weight: 500;
+font-size: 14px;
+color: #1B1B1B;
+}
+.quantite {
+  font-family: 'Manrope';
+  font-weight: 400;
+  font-size: 14px;
+  color: #7A7A7A;
+}
+.duree {
+  position: absolute;
+  top: 2vw;
+  right: 1vw;
+  border-radius: 2vw;
+  background-color: #FFD15B;
+  width: 66px;
+  height: 26px;
+  text-align: center;
 }
