@@ -19,9 +19,9 @@ let Ustensils = createUniqueArray(recettes, "ustensils", true)
 let Appareils = createUniqueArray(recettes, "appliance", true)
 let ingredients = createUniqueArray(recettes, "ingredients", false)
 let Ingredient = createUniqueArray(ingredients, "ingredient", true)
-
 function ToLowerCase(properties) {
   properties.forEach(element => {
+    properties = []
     properties.push(element.toLowerCase())
   });
   return properties

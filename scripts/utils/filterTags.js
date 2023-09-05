@@ -21,7 +21,6 @@ function chooseTag(nameProperty) {
   const elementListeProperty = document.querySelectorAll('.valueListe a')
   const aeraCardTagSelected = document.querySelector(`.listElementSelectedOf${nameProperty}`)
   console.log(aeraCardTagSelected);
-  /* for(let el of (Array.from(elementListeProperty))){ */
   (Array.from(elementListeProperty)).forEach((el) => {  
     el.addEventListener('click', (e) => {
       e.preventDefault()

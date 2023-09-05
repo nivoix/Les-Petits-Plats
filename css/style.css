@@ -182,9 +182,12 @@ main {
   height: 20vw;
 }
 .valueListe {
+  width: 100%;
   width: max-content;
 }
-
+.valueListe:hover{
+  background-color: #FFD15B;
+}
 .nbRecettes {
   font-weight: 400;
   font-family: anton;
@@ -194,7 +197,7 @@ main {
 }
 .elementSelected {
   width: 143%;
-  height: 48px;
+  height: 6vw;
 }
 .listElementSelectedOfIngredient, .listElementSelectedOfAppareils, .listElementSelectedOfUstensils {
   display: flex;
@@ -202,25 +205,27 @@ main {
   padding: 0;
   width: 100%;
   font-size: 2vw;
+  gap: 1vw;
   margin: 0;
   margin-top: 1vw;
   flex-direction: column;
   position: relative;
+  height: auto;
 }
 .tagSelected {
   width: 100%;
-  padding-inline-start: 1vw;
-  height: 35px;
+  height: 6vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-radius: 10px;
+  justify-content: space-around;
+  border-radius: 1vw;
 }
 .close {
   background-image: url(../assets/close_x.png);
   background-repeat: no-repeat;
+  background-size: contain;
   color: black;
-  width: 20px;
-  height: 14px;
+  width: 2vw;
+  height: 2vw;
   cursor: pointer;
 }

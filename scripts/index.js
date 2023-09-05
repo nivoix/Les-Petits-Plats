@@ -4,6 +4,8 @@ import { Ustensils } from "./data/extractDataRecipes.js";
 import { Appareils } from "./data/extractDataRecipes.js";
 import { filterListeTag } from "./utils/filterTags.js";
 import { chooseTag } from "./utils/filterTags.js";
+import { createAllCardRecette } from "./factories/createCardRecette.js";
+import { recettes } from "./data/recettes.js";
 
 const app = () => {
 
@@ -12,7 +14,7 @@ const app = () => {
     const listeAppareils = document.getElementById('listeAppareils')
     const inputSearchProperties = document.querySelectorAll('.searchProperties')
     const selectTag = document.querySelectorAll('.option')
-
+    const areaCard = document.querySelector('.carteRecette')
     //afficher la liste complète des éléments d'une propriété
     selectTag.forEach((tag) => {
         tag.addEventListener('click', ()  => {
@@ -44,6 +46,7 @@ const app = () => {
             }
         })
     })
-    
+    //afficher les cartes des recettes
+    createAllCardRecette(recettes, areaCard)
 }
 app()

@@ -30,7 +30,7 @@ const recettes = [
       ],
       "time": 10,
       "description": "Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistance désirée",
-      "appliance": "blender",
+      "appliance": "Blender",
       "ustensils": ["cuillère à soupe", "verres", "presse citron" ]
   },
   {
