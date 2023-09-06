@@ -36,6 +36,7 @@ const app = () => {
     const itemListeSelected = document.querySelectorAll('.choiceProperties')
     itemListeSelected.forEach((el) => {
         el.addEventListener('click', (e) => {
+            e.preventDefault()
             chooseTag(el.id.substring(5), e.target.textContent)
         })
     })
