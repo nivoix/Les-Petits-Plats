@@ -1,17 +1,19 @@
 import { createListeProperties } from "../factories/createListes.js";
 import { createCardTagSelected } from "../factories/createCardTagSelected.js";
+import { createAllCardRecette } from "../factories/createCardRecette.js";
 
 // filtrer la liste des tags en fonction de la saisie de l'input
 function filterListeTag(property, areaListe, nameProperty) {
   let inputSearch = document.getElementById(`search${nameProperty}`)
-  inputSearch.addEventListener("keyup", (e) => {
-      const liste = document.getElementById(`liste${nameProperty}`)
-      liste.innerHTML = "";
-      console.log(inputSearch.id);
-      const result = property.filter((lettres) => lettres.includes(inputSearch.value))
-      console.log(result);
-      createListeProperties(result, areaListe)
-    })
+  inputSearch.addEventListener("input", (e) => {
+    const liste = document.getElementById(`liste${nameProperty}`)
+    liste.innerHTML = "";
+    const result = property.filter((lettres) => lettres.includes(inputSearch.value))
+    createListeProperties(result, areaListe)
+    if(e.target.value === '') {
+      createListeProperties(property, areaListe)
+    };
+  })
 }
 export { filterListeTag }
 
