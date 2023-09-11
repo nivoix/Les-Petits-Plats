@@ -1,6 +1,9 @@
+import { recettes } from "../data/recettes.js";
 import { createListeProperties } from "../factories/createListes.js";
-import { createCardTagSelected } from "../factories/createCardTagSelected.js";
-import { createAllCardRecette } from "../factories/createCardRecette.js";
+import { displayListTag } from "./displayListTag.js";
+
+const selectTag = document.querySelectorAll('.accordion-item')
+
 
 // filtrer la liste des tags en fonction de la saisie de l'input
 function filterListeTag(property, areaListe, nameProperty) {
@@ -18,22 +21,13 @@ function filterListeTag(property, areaListe, nameProperty) {
 export { filterListeTag }
 
 
-// choisir un élément de la liste et en faire un tag
-function chooseTag(nameProperty, Value) {
-  const aeraCardTagSelected = document.getElementById(`listeTagSelected${nameProperty}`)
-  //creation du tag de l'item selectionné
-  createCardTagSelected(Value, aeraCardTagSelected)
-  const tag = document.getElementById(`${Value}`)
-  // suppression du tag
-  closeTag(tag)
-}
-export { chooseTag }
-
 // Suppression du tag
-function closeTag(tag) {
-  const close = document.getElementById(`${tag.id}`)
-  close.addEventListener('click', () => {
-    tag.remove()
-  })
+ function closeTag(tag, choiceName) {
+  const close = document.getElementById(`close${choiceName}`)
+    close.addEventListener('click', () => {
+      tag.remove()
+      displayListTag(selectTag, recettes)
+    })
+    
 }
 export { closeTag }
