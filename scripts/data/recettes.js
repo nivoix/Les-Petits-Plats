@@ -1444,7 +1444,7 @@ const recettes = [
       "servings": 4,
       "ingredients": [
           {
-              "ingredient": "Ooeuf",
+              "ingredient": "oeuf",
               "quantity": 3
           },
           {
