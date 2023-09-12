@@ -1,9 +1,10 @@
 import { recettes } from "../data/recettes.js";
 import { createListeProperties } from "../factories/createListes.js";
 import { displayListTag } from "./displayListTag.js";
+import { searchRecipes } from "./filterByInput.js";
+import { finalFilter} from "./filterByTags.js";
 
 const selectTag = document.querySelectorAll('.accordion-item')
-
 
 // filtrer la liste des tags en fonction de la saisie de l'input
 function filterListeTag(property, areaListe, nameProperty) {
@@ -22,12 +23,17 @@ export { filterListeTag }
 
 
 // Suppression du tag
- function closeTag(tag, choiceName) {
+ function closeTag(tag, choiceName, arrayTags) {
   const close = document.getElementById(`close${choiceName}`)
-    close.addEventListener('click', () => {
-      tag.remove()
+  close.addEventListener('click', (e) => {
+    tag.remove()
+    arrayTags.splice(Array.from(tagUnselected).indexOf(tag),1)
+    if(arrayTags.length === 0) {
       displayListTag(selectTag, recettes)
-    })
-    
+      searchRecipes()
+    }else if( arrayTags.length >= 1){ 
+      finalFilter(arrayTags, searchRecipes())
+    }
+  })
 }
 export { closeTag }

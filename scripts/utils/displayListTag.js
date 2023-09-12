@@ -25,8 +25,7 @@ function displayListTag (selectTag, property) {
 					closeListTag('collapseTwo')
 			}
 		})
-  })
-	
+  })	
 }
 export { displayListTag }
 
