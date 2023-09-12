@@ -10,26 +10,24 @@ function createUniqueArray(array, value, arrayContainsObjects) {
     })
   );
   if (arrayContainsObjects) {
-    //filtre les doublons avec Set()
-    return [...new Set(array)];
+    return [...new Set(array.map((el) => el.toLowerCase()))];
   } return array
 }
+export { createUniqueArray }
 
-let Ustensils = createUniqueArray(recettes, "ustensils", true)
-let Appareils = createUniqueArray(recettes, "appliance", true)
-let ingredients = createUniqueArray(recettes, "ingredients", false)
-let Ingredient = createUniqueArray(ingredients, "ingredient", true)
-function ToLowerCase(properties) {
-  properties.forEach(element => {
-    properties = []
-    properties.push(element.toLowerCase())
-  });
-  return properties
+
+function extractDataRecipes(data) {
+
+  let Ustensils = createUniqueArray(data, "ustensils", true)
+  let Appareils = createUniqueArray(data, "appliance", true)
+  let ingredients = createUniqueArray(data, "ingredients", false)
+  let Ingredient = createUniqueArray(ingredients, "ingredient", true)
+
+  return { Ustensils, Appareils, Ingredient }
 }
-ToLowerCase(Ustensils)
-ToLowerCase(Appareils)
-ToLowerCase(Ingredient)
+export { extractDataRecipes }
 
+/* 
 export { Ustensils }
 export { Appareils }
-export { Ingredient }
+export { Ingredient } */

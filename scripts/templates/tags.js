@@ -15,17 +15,19 @@ function liste(value) {
 }
 export { liste }
 
-function createSelectTagCard(value) {
+function createSelectTagCard(value, tag) {
 
   function createCardTag() {
     const card = document.createElement('li')
     const close = document.createElement('span')
     card.classList.add("tagSelected")
+    card.classList.add(`tagSelcted${tag}`)
     card.textContent = value
     card.id = value
     card.style.backgroundColor = '#FFD15B'
     card.style.color = 'black'
     close.className ='close'
+    close.id = `close${value}`
     card.appendChild(close)
     return card
   }

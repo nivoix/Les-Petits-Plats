@@ -7,6 +7,8 @@
 }
 a {
   text-decoration: none;
+  width: 100%;
+  display: flex;
 }
 /**************************************HEADER****************************************/
 header {
@@ -184,20 +186,22 @@ main {
   display: flex;
   list-style: none;
   padding: 0;
-  width: 84%;
+  width: 99%;
   font-size: 2vw;
   margin: 0;
+  padding-inline-start: 1vw;
   margin-top: 1vw;
   flex-direction: column;
   overflow: scroll;
   height: 20vw;
+  align-items: flex-start;
 }
 .valueListe {
   width: 100%;
-  width: max-content;
 }
 .valueListe:hover{
   background-color: #FFD15B;
+  width: 100%;
 }
 .elementSelected {
   width: 143%;
@@ -317,4 +321,14 @@ color: #1B1B1B;
   line-height: 2vw;
   font-family: 'Manrope';
   font-weight: 400;
+}
+.messageErreur {
+  font-size: 2vw;
+  width: max-content;
+  font-family: 'Manrope';
+  font-weight: 500;
+  color: red;
+  margin-bottom: 12vw;
+  padding-top: 5vw;
+  padding-inline: 0;
 }
