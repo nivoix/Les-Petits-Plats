@@ -2,7 +2,7 @@ import { recettes } from "../data/recettes.js";
 import { createListeProperties } from "../factories/createListes.js";
 import { displayListTag } from "./displayListTag.js";
 import { searchRecipes } from "./filterByInput.js";
-import { finalFilter } from "./filterByTags.js";
+import { finalFilter, result } from "./filterByTags.js";
 
 const selectTag = document.querySelectorAll('.accordion-item')
 
@@ -24,18 +24,23 @@ export { filterListeTag }
 // Suppression du tag
 function closeTag(tag, choiceName, arrayTags) {
 const close = document.getElementById(`close${choiceName}`)
+const tagUnselected = document.querySelectorAll('.tagSelected')
   close.addEventListener('click', (e) => {
-    const tagUnselected = document.querySelectorAll('.tagSelected')
     tag.remove()
     arrayTags.splice(Array.from(tagUnselected).indexOf(tag),1)
     if(arrayTags.length === 0) {
       displayListTag(selectTag, recettes)
       searchRecipes()
-    }else if( arrayTags.length=== 1) {
+    }else if( arrayTags.length === 1) {
+      displayListTag(selectTag, result)
       finalFilter(arrayTags, searchRecipes())
     }else if(arrayTags.length > 1){
-      finalFilter(arrayTags, searchRecipes())
+      displayListTag(selectTag, result)
+      finalFilter([arrayTags[0]], searchRecipes())
+      for(let i = 1; i < arrayTags.length; i++){
+        finalFilter([arrayTags[i]], result)
+      }
     }
-  })  
+  })
 }
 export { closeTag }

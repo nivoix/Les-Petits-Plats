@@ -29,6 +29,7 @@ mainInput.addEventListener('input', () => {
       messageErreur.textContent = `« Aucune recette ne contient "${searchTerm}" vous pouvez chercher «tarte aux pommes », « poisson », etc.`
       messageErreur.className ='messageErreur'
       areaCard.appendChild(messageErreur)
+      nbTotalRecettes(searchRecipe)
     } else if (searchRecipe.length === 50){
       areaCard.innerHTML = ''
       //afficher toutes les cartes des recettes

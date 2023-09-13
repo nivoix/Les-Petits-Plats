@@ -12,13 +12,10 @@ function sortListTag(inputSearchProperties, property) {
   inputSearchProperties.forEach((inputSearch) => {
       inputSearch.addEventListener("click", (e) => {
           if(inputSearch.id.includes('Ingredient')){
-              console.log("je suis ingredient");
               filterListeTag(data.Ingredient, listeIngredient, "Ingredient")
           }else if (inputSearch.id.includes('Ustensils')){
-              console.log("je suis Ustensils");
               filterListeTag(data.Ustensils, listeUstensils, "Ustensils")
           } else if (inputSearch.id.includes('Appareils')){
-              console.log("je suis Appareils");
               filterListeTag(data.Appareils, listeAppareils, "Appareils")
           }
       })

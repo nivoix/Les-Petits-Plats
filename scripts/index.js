@@ -32,10 +32,13 @@ const app = () => {
         let data 
         nbTagSelected ?  data = searchRecipes() : data = result
         ///////////////////////////////////////////////////////////////////////////////////////////////////
-        arrayTags.push(e.target.textContent)
-        const aeraCardTagSelected = document.getElementById(`listeTagSelected${el.id.substring(5)}`)
-        //creation du tag de l'item selectionné
-        createCardTagSelected(e.target.textContent, aeraCardTagSelected, el.id.substring(5))
+        // ne pas mettre 2 fois le même tag
+        if(!arrayTags.some(tag =>tag.includes(e.target.textContent))) {
+          arrayTags.push(e.target.textContent)
+          const aeraCardTagSelected = document.getElementById(`listeTagSelected${el.id.substring(5)}`)
+          //creation du tag de l'item selectionné
+          createCardTagSelected(e.target.textContent, aeraCardTagSelected, el.id.substring(5))
+        }
         const tag = document.getElementById(`${e.target.textContent}`)
         closeTag(tag, e.target.textContent, arrayTags)
         finalFilter(arrayTags, data)

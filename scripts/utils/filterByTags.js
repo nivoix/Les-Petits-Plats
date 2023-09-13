@@ -11,10 +11,10 @@ let searchFinalRecipe
 function finalFilter(value, finalRecipes) {
   value.every((tag) => {
     searchFinalRecipe = finalRecipes.filter(finalRecipe => {
-      const searchInTagIngredientSeclected = finalRecipe.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(tag))
-      const searchInTagAppareilsSelected = finalRecipe.appliance.toLowerCase().includes(tag)
       const searchInTagUstensilsSelected = finalRecipe.ustensils.some(ustensil => ustensil.toLowerCase().includes(tag))
-      return (searchInTagIngredientSeclected || searchInTagAppareilsSelected || searchInTagUstensilsSelected)
+      const searchInTagAppareilsSelected = finalRecipe.appliance.toLowerCase().includes(tag)
+      const searchInTagIngredientSeclected = finalRecipe.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(tag))
+      return (searchInTagUstensilsSelected || searchInTagAppareilsSelected || searchInTagIngredientSeclected )
     })
     return searchFinalRecipe
   })

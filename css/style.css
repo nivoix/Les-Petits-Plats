@@ -96,7 +96,7 @@ main {
   margin-bottom: auto;
   margin-top: 1.7vw;
 }
-.accordion-header:hover, .accordion-header:focus, #accordionExample, --bs-accordion-border-color, .accordion-header {
+.accordion-header:hover, .accordion-header:focus, #accordionExample, .accordion-header {
   border-color: transparent;
   box-shadow: none;
 }
@@ -147,7 +147,7 @@ main {
 #collapseOne, #collapseTwo, #collapseThree {
   width: 21vw;
   height: auto;
-  padding-top: 4vw;
+  padding-top: 2vw;
   background-color: white;
   top: -1vw;
   position: relative;
@@ -193,7 +193,7 @@ main {
   margin-top: 1vw;
   flex-direction: column;
   overflow: scroll;
-  height: 20vw;
+  height: 12vw;
   align-items: flex-start;
 }
 .valueListe {
