@@ -1,4 +1,3 @@
-import { recettes } from "../data/recettes.js";
 
 // extraction des données nécessaires présentes dans les recettes
 function createUniqueArray(array, value, arrayContainsObjects) {
@@ -22,12 +21,9 @@ function extractDataRecipes(data) {
   let Appareils = createUniqueArray(data, "appliance", true)
   let ingredients = createUniqueArray(data, "ingredients", false)
   let Ingredient = createUniqueArray(ingredients, "ingredient", true)
+  
 
   return { Ustensils, Appareils, Ingredient }
 }
 export { extractDataRecipes }
 
-/* 
-export { Ustensils }
-export { Appareils }
-export { Ingredient } */
