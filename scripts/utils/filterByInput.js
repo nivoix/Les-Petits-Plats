@@ -16,56 +16,69 @@ mainInput.addEventListener('input', () => {
 })
   //recherche des recettes correspondantes à la saisie de l'input principale
   function searchRecipes() {
-    /* const searchRecipe = recettes.filter(recette => {
-      const searchInName = recette.name.toLowerCase().includes(searchTerm)
-      const searchInDescription = recette.description.toLowerCase().includes(searchTerm)
-      const searchInIngredient = recette.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(searchTerm))
-      return (searchInName || searchInDescription || searchInIngredient)
-    }) */
-    const searchTerm = mainInput.value.toLowerCase()
-    const foundRecipes = searchRecipesFor(searchTerm)
+    const searchTerm = mainInput.value.toLowerCase();
+    const foundRecipes = searchRecipesFor(searchTerm);
     if (foundRecipes.length === 0) {
-      areaCard.innerHTML = ''
-      const messageErreur = document.createElement('p')
-      messageErreur.textContent = `« Aucune recette ne contient "${searchTerm}" vous pouvez chercher «tarte aux pommes », « poisson », etc.`
-      messageErreur.className ='messageErreur'
-      areaCard.appendChild(messageErreur)
-      nbTotalRecettes(foundRecipes)
+      areaCard.innerHTML = '';
+      const messageErreur = document.createElement('p');
+      messageErreur.textContent = `« Aucune recette ne contient "${searchTerm}" vous pouvez chercher «tarte aux pommes », « poisson », etc.`;
+      messageErreur.className ='messageErreur';
+      areaCard.appendChild(messageErreur);
+      nbTotalRecettes(foundRecipes);
     } else if (foundRecipes.length === 50){
-      areaCard.innerHTML = ''
+      areaCard.innerHTML = '';
       //afficher toutes les cartes des recettes
-      createAllCardRecette(recettes, areaCard)
-      displayListTag(selectTag, recettes)
-      nbTotalRecettes(recettes)
+      createAllCardRecette(recettes, areaCard);
+      displayListTag(selectTag, recettes);
+      nbTotalRecettes(recettes);
     }else {
-      areaCard.innerHTML = ''
-      createAllCardRecette(foundRecipes, areaCard)
-      displayListTag(selectTag, foundRecipes)
-      nbTotalRecettes(foundRecipes)
+      areaCard.innerHTML = '';
+      createAllCardRecette(foundRecipes, areaCard);
+      displayListTag(selectTag, foundRecipes);
+      nbTotalRecettes(foundRecipes);
     }
-    resultInput =  foundRecipes
-    return foundRecipes
+    resultInput =  foundRecipes;
+    return foundRecipes;
   }
-  export { searchRecipes }
-  export { resultInput }
+  export { searchRecipes };
+  export { resultInput };
 
   function searchRecipesFor(searchTerm) {
-    let tabRecipe = []
+    console.time('for')
+    let tabRecipe = [];
 
     for(let i = 0 ; i <recettes.length ; i ++) {
-      let recette = recettes[i]
+      let recette = recettes[i];
 
       if (searchTermFoundInRecette(recette, searchTerm)) {
-        tabRecipe.push(recette)
+        tabRecipe.push(recette);
       }
     }
-    return tabRecipe
+    console.timeEnd('for');
+    return tabRecipe;
   }
 
   function searchTermFoundInRecette(recette, searchTerm) {
-    const foundInTitle = recette.name.toLowerCase().includes(searchTerm)
-    const foundInDescription = recette.description.toLowerCase().includes(searchTerm)
-    const foundInIngredient = recette.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(searchTerm))
+    const foundInTitle = recette.name.toLowerCase().includes(searchTerm);
+    const foundInDescription = recette.description.toLowerCase().includes(searchTerm);
+    const foundInIngredient = recette.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(searchTerm));
     
-    return foundInTitle || foundInDescription || foundInIngredient
+    return foundInTitle || foundInDescription || foundInIngredient;
   }
+
+
+  // boucle WHILE
+  /* function searchRecipesFor(searchTerm) {
+    console.time('While')
+    let tabRecipe = [];
+    let i = 0 
+    while(i < recettes.length) {
+      let recette = recettes[i];
+      i ++;
+      if (searchTermFoundInRecette(recette, searchTerm)) {
+        tabRecipe.push(recette);
+      }
+    }
+    console.timeEnd('While');
+    return tabRecipe;
+  } */
