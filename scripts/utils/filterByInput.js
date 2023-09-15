@@ -57,7 +57,7 @@ mainInput.addEventListener('input', () => {
     console.timeEnd('for');
     return tabRecipe;
   }
-
+  
   function searchTermFoundInRecette(recette, searchTerm) {
     const foundInTitle = recette.name.toLowerCase().includes(searchTerm);
     const foundInDescription = recette.description.toLowerCase().includes(searchTerm);
@@ -66,19 +66,3 @@ mainInput.addEventListener('input', () => {
     return foundInTitle || foundInDescription || foundInIngredient;
   }
 
-
-  // boucle WHILE
-  /* function searchRecipesFor(searchTerm) {
-    console.time('While')
-    let tabRecipe = [];
-    let i = 0 
-    while(i < recettes.length) {
-      let recette = recettes[i];
-      i ++;
-      if (searchTermFoundInRecette(recette, searchTerm)) {
-        tabRecipe.push(recette);
-      }
-    }
-    console.timeEnd('While');
-    return tabRecipe;
-  } */
