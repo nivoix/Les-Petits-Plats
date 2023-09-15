@@ -11,6 +11,7 @@ let resultInput
 const mainInput = document.querySelector('#search')
 mainInput.addEventListener('input', () => {
   if (mainInput.value.length >=3 || mainInput.value.length === 0) {
+      console.time('for')
       searchRecipes()
   }
 })
@@ -34,6 +35,7 @@ mainInput.addEventListener('input', () => {
     }else {
       areaCard.innerHTML = '';
       createAllCardRecette(foundRecipes, areaCard);
+      console.timeEnd('for');
       displayListTag(selectTag, foundRecipes);
       nbTotalRecettes(foundRecipes);
     }
@@ -44,7 +46,7 @@ mainInput.addEventListener('input', () => {
   export { resultInput };
 
   function searchRecipesFor(searchTerm) {
-    console.time('for')
+    
     let tabRecipe = [];
 
     for(let i = 0 ; i <recettes.length ; i ++) {
@@ -54,7 +56,7 @@ mainInput.addEventListener('input', () => {
         tabRecipe.push(recette);
       }
     }
-    console.timeEnd('for');
+    
     return tabRecipe;
   }
   
