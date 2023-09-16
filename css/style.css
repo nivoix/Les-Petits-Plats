@@ -149,6 +149,11 @@ main {
   align-items: center;
   background-color: transparent;
 }
+.msgInfoInput {
+  padding-inline: 0;
+  font-size: 2vw;
+  font-weight: 500;
+}
 #collapseOne, #collapseTwo, #collapseThree {
   width: 21vw;
   height: auto;
