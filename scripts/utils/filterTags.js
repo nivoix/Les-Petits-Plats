@@ -4,19 +4,29 @@ import { displayListTag } from "./displayListTag.js";
 import { searchRecipes } from "./filterByInput.js";
 import { finalFilter, result } from "./filterByTags.js";
 
+const ligneTag = document.querySelector('.optionsFiltre')
+const msgInfoInput = document.createElement('p')
+msgInfoInput.className= "msgInfoInput"
+ligneTag.appendChild(msgInfoInput)
 const selectTag = document.querySelectorAll('.accordion-item')
-
+const regexp = new RegExp('^[a-zA-Z _-]+$')
 // filtrer la liste des tags en fonction de la saisie de l'input
 function filterListeTag(property, areaListe, nameProperty) {
   let inputSearch = document.getElementById(`search${nameProperty}`)
-  inputSearch.addEventListener("input", (e) => {
-    const liste = document.getElementById(`liste${nameProperty}`)
-    liste.innerHTML = "";
-    const result = property.filter((lettres) => lettres.includes(inputSearch.value))
-    createListeProperties(result, areaListe)
-    if(e.target.value === '') {
+  inputSearch.addEventListener("keyup", (e) => {
+    if(regexp.test(inputSearch.value)){
+      console.log(inputSearch.value);
+      msgInfoInput.textContent = ""
+      const liste = document.getElementById(`liste${nameProperty}`)
+      liste.innerHTML = "";
+      const result = property.filter((lettres) => lettres.includes(inputSearch.value))
+      createListeProperties(result, areaListe)
+    }else if(e.target.value === "") {
+      msgInfoInput.textContent = ""
       createListeProperties(property, areaListe)
-    };
+    }else{
+      msgInfoInput.textContent = "Les caractères spéciaux et les chiffres ne sont pas acceptés"
+    }
   })
 }
 export { filterListeTag }
