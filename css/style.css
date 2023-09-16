@@ -12,17 +12,17 @@ a {
 }
 /**************************************HEADER****************************************/
 header {
-  height: 47vw;
+  height: 38vw;
   display: block;
   background-image: url(../assets/backgroundHeader.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .logo {
-  padding: 5vw 0 0 5vw;
-  width: 34vw;
-  height: 8vw;
-  margin-bottom: 8vw;
+  padding: 3vw 0 0 3vw;
+  width: 31vw;
+  height: 7vw;
+  margin-bottom: 4vw;
 }
 .title {
   margin: 0;
@@ -71,6 +71,11 @@ header {
   height: 5vw;
   margin-top: 5vw;
   margin-bottom: 5vw;
+}
+.msgInfo {
+  margin-inline-start: 13vw;
+  color: white;
+  font-size: 2vw;
 }
 /***********************************************************/
 main {

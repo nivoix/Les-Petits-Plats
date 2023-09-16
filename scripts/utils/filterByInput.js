@@ -4,15 +4,22 @@ import { nbTotalRecettes } from "./countNbTotalrecettes.js"
 import { recettes } from "../data/recettes.js"
 
 
+const areaInput = document.querySelector('.container-fluid')
 const selectTag = document.querySelectorAll('.accordion-item')
 const areaCard = document.querySelector('.carteRecette')
 let resultInput
+const msgInfo = document.createElement('p')
+msgInfo.className = "msgInfo"
+areaInput.appendChild(msgInfo)
 //filtrer les recettes en fonction de l'input principal et des tags
 const mainInput = document.querySelector('#search')
 mainInput.addEventListener('input', () => {
   if (mainInput.value.length >=3 || mainInput.value.length === 0) {
-      console.time('for')
-      searchRecipes()
+    console.time('filter')
+    msgInfo.textContent = ""
+    searchRecipes()
+  } else if(mainInput.value.length > 0) {
+    msgInfo.textContent = "Vous devez saisir au minimum 3 caractères"
   }
 })
   //recherche des recettes correspondantes à la saisie de l'input principale
