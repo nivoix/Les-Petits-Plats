@@ -334,11 +334,11 @@ color: #1B1B1B;
 }
 .messageErreur {
   font-size: 2vw;
-  width: max-content;
+  width: 100%;
   font-family: 'Manrope';
   font-weight: 500;
   color: red;
-  margin-bottom: 12vw;
-  padding-top: 5vw;
-  padding-inline: 0;
+  margin-bottom: 5vw;
+  padding-top: 3vw;
+  padding-inline: 4vw;
 }
