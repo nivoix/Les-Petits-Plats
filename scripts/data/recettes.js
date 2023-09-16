@@ -49,7 +49,7 @@ const recettes = [
               "quantity" : 1
           },
           {
-              "ingredient" : "tomate",
+              "ingredient" : "tomates",
               "quantity" : 2
           },
           {
@@ -87,7 +87,7 @@ const recettes = [
               "unit" : "ml"
           },
           {
-              "ingredient": "coulis de tomate",
+              "ingredient": "coulis de tomates",
               "quantity" : 25,
               "unit" : "cl"
           },
@@ -106,7 +106,7 @@ const recettes = [
           }
       ],
       "time": 80,
-      "description": "Découper le poulet en morceaux, les faire dorer dans une cocotte avec de l'huile d'olive. Salez et poivrez. Une fois doré, laisser cuire en ajoutant de l'eau. Au bout de 30 minutes, ajouter le coulis de tomate, le lait de coco ainsi que le poivron et l'oignon découpés en morceaux. Laisser cuisiner 30 minutes de plus. Servir avec du riz",
+      "description": "Découper le poulet en morceaux, les faire dorer dans une cocotte avec de l'huile d'olive. Salez et poivrez. Une fois doré, laisser cuire en ajoutant de l'eau. Au bout de 30 minutes, ajouter le coulis de tomates, le lait de coco ainsi que le poivron et l'oignon découpés en morceaux. Laisser cuisiner 30 minutes de plus. Servir avec du riz",
       "appliance": "Cocotte",
       "ustensils": ["couteau"]
   },{
@@ -125,7 +125,7 @@ const recettes = [
               "quantity": 200,
               "unit": "grammes"
           },{
-              "ingredient": "tomate",
+              "ingredient": "tomates",
               "quantity": 2
           },
           {
@@ -164,7 +164,7 @@ const recettes = [
              "unit": "grammes"
          },
          {
-              "ingredient": "tomate",
+              "ingredient": "tomates",
               "quantity": 2
          },
          {
@@ -199,7 +199,7 @@ const recettes = [
               "quantity": 1
           },
           {
-              "ingredient": "pomme",
+              "ingredient": "pommes",
               "quantity": 3
           },
           {
@@ -374,11 +374,11 @@ const recettes = [
   },{
       "id": 11,
       "image": "Recette11.jpg",
-      "name": "Salade tomate, mozzarella et pommes",
+      "name": "Salade tomates, mozzarella et pommes",
       "servings": 4,
       "ingredients":[
           {
-              "ingredient": "tomate cerise",
+              "ingredient": "tomates cerise",
               "quantity": 250,
               "unit": "grammes"
           },
@@ -393,7 +393,7 @@ const recettes = [
               "unit": "tranches"
           }, 
           {
-              "ingredient": "pomme",
+              "ingredient": "pommes",
               "quantity": 1
           },
           {
@@ -407,13 +407,13 @@ const recettes = [
           }
       ],
       "time": 10,
-      "description": "Commencer par couper les feuilles de salade, ajouter les tomates cerises et le fromage découpé en cubes ou en boules avec la cuillère à melon. Découper le jambon de parme en fines lamelles. Ajouter la pomme elle aussi découpée en petit morceaux. Assaisonnez à votre gout. ",
+      "description": "Commencer par couper les feuilles de salade, ajouter les tomates cerises et le fromage découpé en cubes ou en boules avec la cuillère à melon. Découper le jambon de parme en fines lamelles. Ajouter la pommes elle aussi découpée en petit morceaux. Assaisonnez à votre gout. ",
       "appliance": "Saladier",
       "ustensils": ["couteau", "cuillère à melon" ]
   },{
       "id": 12,
       "image": "Recette12.jpg",
-      "name": "Compote pomme rhubarbe",
+      "name": "Compote pommes rhubarbe",
       "servings": 4,
       "ingredients":[
           {
@@ -422,7 +422,7 @@ const recettes = [
               "unit": "grammes"
           },
           {
-              "ingredient": "pomme",
+              "ingredient": "pommes",
               "quantity": 8
           },
           {
@@ -562,11 +562,11 @@ const recettes = [
   {
       "id": 16,
       "image": "Recette16.jpg",
-      "name": "Gratin de pâtes à la tomate",
+      "name": "Gratin de pâtes à la tomates",
       "servings": 2,
       "ingredients": [
           {
-              "ingredient": "tomate",
+              "ingredient": "tomates",
               "quantity": 500,
               "unit": "grammes"
           },
@@ -742,7 +742,7 @@ const recettes = [
               "quantity": 2
           },
           {
-              "ingredient": "coulis de tomate",
+              "ingredient": "coulis de tomates",
               "quantity": 300,
               "unit": "grammes"
           },
@@ -861,7 +861,7 @@ const recettes = [
               "unit": "grammes"
           },
           {
-              "ingredient": "tomate",
+              "ingredient": "tomates",
               "quantity": 1
           },
           {
@@ -927,7 +927,7 @@ const recettes = [
       "servings": 2,
       "ingredients": [
           {
-              "ingredient": "tomate",
+              "ingredient": "tomates",
               "quantity": 6
           },
           {
@@ -1328,7 +1328,7 @@ const recettes = [
               "quantity": 1
           },
           {
-              "ingredient": "coulis de tomate",
+              "ingredient": "coulis de tomates",
               "quantity": 20,
               "unit": "cl"
           },
@@ -1382,7 +1382,7 @@ const recettes = [
       "servings": 40,
       "ingredients": [
           {
-              "ingredient": "pomme",
+              "ingredient": "pommes",
               "quantity": 2
           },
           {
@@ -1679,7 +1679,7 @@ const recettes = [
               "quantity": 1
           },
           {
-              "ingredient": "tomate pelée",
+              "ingredient": "tomates pelée",
               "quantity": 1,
               "unit": "boites"
           },
