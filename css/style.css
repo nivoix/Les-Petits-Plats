@@ -12,7 +12,7 @@ a {
 }
 /**************************************HEADER****************************************/
 header {
-  height: 38vw;
+  height: 40vw;
   display: block;
   background-image: url(../assets/backgroundHeader.png);
   background-size: cover;
@@ -20,8 +20,8 @@ header {
 }
 .logo {
   padding: 3vw 0 0 3vw;
-  width: 31vw;
-  height: 7vw;
+  width: 180px;
+  height: 30px;
   margin-bottom: 4vw;
 }
 .title {
@@ -30,7 +30,7 @@ header {
   display: flex;
   color: #FFD15B;
   font-family: 'anton', sans-serif;
-  font-size: 4vw;
+  font-size: 3vw;
   padding-bottom: 1vw;
   justify-content: center;
 }
@@ -42,7 +42,7 @@ header {
   padding-inline-start: 1vw;
   border-radius: 1vw;
   height: 5vw;
-  width: 74%;
+  width: 68%;
   background-color: white;
   justify-content: space-between;
   flex-direction: row-reverse;
@@ -63,19 +63,20 @@ header {
 }
 .saisie {
   padding: 0;
-  font-size: 3vw;
-  width: 85%;
+  font-size: 16px;
+  width: 92%;
   border: 0;
   outline: none;
   border-radius: 0.7vw;
-  height: 5vw;
+  height: 16px;
   margin-top: 5vw;
   margin-bottom: 5vw;
+  padding-bottom: 3px;
 }
 .msgInfo {
   margin-inline-start: 13vw;
   color: white;
-  font-size: 2vw;
+  font-size: 10px;
 }
 /***********************************************************/
 main {
@@ -97,7 +98,7 @@ main {
   font-weight: 400;
   font-family: anton;
   padding-inline-end: 2vw;
-  font-size: 3vw;
+  font-size: 21px;
   margin-bottom: auto;
   margin-top: 1.7vw;
 }
@@ -107,12 +108,12 @@ main {
 }
 .optionsFiltre {
   display: flex;
-  gap: 8%;
-  width: 63vw;
+  gap: 2px;
+  width: 57vw;
   height: auto;
   margin-top: 1vw;
-  margin-inline-start: 6vw;
-  justify-content: space-around;
+  margin-inline-start: 5vw;
+  justify-content: space-between;
   align-items: flex-start;
   
 }
@@ -120,15 +121,17 @@ main {
   padding-inline: 1vw;
   padding-top: 1vw;
   padding-bottom: 1vw;
-  font-size: 2.5vw;
-  width: 21vw;
-  height: 6vw;
+  font-size: 16px;
+  width: 14vw;
+  min-width: 150px;
+  min-height: 25px;
+  height: 4vw;
   border-radius: 1vw;
 }
 .accordion-button::after{
-  background-size: 3vw;
-  height: 3vw;
-  width: 3vw;
+  background-size: 8px;
+  height: 6px;
+  width: 13px;
 }
 .accordion-button:focus {
   border-color: inherit;
@@ -144,7 +147,8 @@ main {
   border: 0;
   font-family: 'manrope', sans-serif;
   padding-inline: 0;
-  width: 23%;
+  min-width: 150px;
+  min-height: 25px;
   height: auto;
   align-items: center;
   background-color: transparent;
@@ -154,8 +158,17 @@ main {
   font-size: 2vw;
   font-weight: 500;
 }
+.collapseOne {
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+} 
+.collapseThree {
+  border-bottom-right-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+}
 #collapseOne, #collapseTwo, #collapseThree {
-  width: 21vw;
+  width: 14vw;
+  min-width: 150px;
   height: auto;
   padding-top: 2vw;
   background-color: white;
@@ -175,35 +188,37 @@ main {
   margin: 0;
   border-radius: 1vw;
   border: 1px solid #C6C6C6;
-  height: 5vw;
+  min-height: 25px;
+  height: 3vw;
   width: 85%;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
 }
 #searchIngredient, #searchAppareils, #searchUstensils {
-  padding: 0;
-  font-size: 2vw;
+  padding: 0 0 0 5px;
+  font-size: 14px;
   width: 82%;
   border: 0;
   outline: none;
 }
 .loupeTag {
-  width: 3vw;
-  height: 3vw;
+  width: 15px;
+  height: 15px;
 }
 .choiceProperties {
   display: flex;
   list-style: none;
   padding: 0;
   width: 99%;
-  font-size: 2vw;
+  font-size: 14px;
   margin: 0;
   padding-inline-start: 1vw;
   margin-top: 1vw;
   flex-direction: column;
   overflow: scroll;
   height: 12vw;
+  min-height: 106px;
   align-items: flex-start;
 }
 .valueListe {
@@ -214,21 +229,23 @@ main {
   width: 100%;
 }
 .elementSelected {
-  width: 143%;
+  width: 14vw;
+  min-width: 150px;
   height: auto;
+  margin-bottom: 10px;
 }
 .listElementSelectedOfIngredient, .listElementSelectedOfAppareils, .listElementSelectedOfUstensils {
   display: flex;
   list-style: none;
   padding: 0;
-  width: 100%;
-  font-size: 2vw;
+  font-size: 14px;
   gap: 1vw;
   margin: 0;
   margin-top: 1vw;
   flex-direction: column;
   position: relative;
-  height: auto;
+  min-height: 36px;
+  height: 4vw;
 }
 .tagSelected {
   width: 100%;
@@ -243,8 +260,8 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
   color: black;
-  width: 2vw;
-  height: 2vw;
+  width: 10px;
+  height: 10px;
   cursor: pointer;
 }
 /************************************Card Recette**********************************/
@@ -254,28 +271,31 @@ main {
   gap: 2%;
   width: 90%;
   margin-inline: auto;
+  justify-content: center;
 }
 .cardRecette {
   margin-top: 0;
+  height: auto;
   width: 32%;
+  min-width: 240px;
   padding-inline: 0;
   border-radius: 2vw;
   margin-bottom: 1.7vw;
 }
 .imgRecette {
-  height: 18vw;
+  height: 253px;
   object-fit: cover;
   border-radius: 2vw 2vw 0 0;
 }
 .nameRecette {
   font-family: 'Anton';
-  font-size: 2vw;
+  font-size: 18px;
   font-weight: 400;
   margin: 0.7vw 0 1.4vw 0;
 }
 .titreInfo {
   font-family: 'Manrope';
-  font-size: 0.8vw;
+  font-size: 12px;
   font-weight: 700;
 }
 #titreInfo {
@@ -283,10 +303,9 @@ main {
 }
 .infoDetail {
   font-family: 'Manrope';
-  font-size: 1vw;
+  font-size: 14px;
   font-weight: 400;
   margin-bottom: 1.4vw;
-
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
@@ -302,38 +321,37 @@ main {
   margin-top: 0.7vw;
   padding-inline: 0;
   border: none;
-  width: auto;
-  min-width: 10.2vw;
+  width: 48%;
 }
 .aliment {
   margin: 0;
 font-family: 'Manrope';
 font-weight: 500;
-font-size: 1vw;
+font-size: 14px;
 color: #1B1B1B;
 }
 .quantite {
   font-family: 'Manrope';
   font-weight: 400;
-  font-size: 1vw;
+  font-size: 14px;
   color: #7A7A7A;
 }
 .duree {
   position: absolute;
-  top: 2vw;
+  top: 18px;
   right: 1vw;
   border-radius: 2vw;
   background-color: #FFD15B;
-  width: 5vw;
-  height: 2vw;
+  width: 50px;
+  height: 20px;
   text-align: center;
-  font-size: 0.8vw;
-  line-height: 2vw;
+  font-size: 12px;
+  line-height: 19px;
   font-family: 'Manrope';
   font-weight: 400;
 }
 .messageErreur {
-  font-size: 2vw;
+  font-size: 12px;
   width: 100%;
   font-family: 'Manrope';
   font-weight: 500;
