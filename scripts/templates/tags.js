@@ -21,7 +21,6 @@ function createSelectTagCard(value, tag) {
     const card = document.createElement('li')
     const close = document.createElement('span')
     card.classList.add("tagSelected")
-    card.classList.add(`tagSelcted${tag}`)
     card.textContent = value
     card.id = value
     card.style.backgroundColor = '#FFD15B'
