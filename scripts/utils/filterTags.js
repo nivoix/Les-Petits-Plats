@@ -32,12 +32,15 @@ function filterListeTag(property, areaListe, nameProperty) {
 export { filterListeTag }
 
 // Suppression du tag
-function closeTag(tag, choiceName, arrayTags) {
+function closeTag(/* tag, */ choiceName, arrayTags, arrayData) {
 const close = document.getElementById(`close${choiceName}`)
-const tagUnselected = document.querySelectorAll('.tagSelected')
+// const tagUnselected = document.querySelectorAll('.tagSelected')
   close.addEventListener('click', (e) => {
+    const tag = document.getElementById(`${e.target.id.substring(5)}`)
+    const indexTag = arrayTags.indexOf(tag.id);
     tag.remove()
-    arrayTags.splice(Array.from(tagUnselected).indexOf(tag),1)
+    arrayTags.splice(indexTag,1)
+    arrayData.splice(indexTag+1,1)
     if(arrayTags.length === 0) {
       displayListTag(selectTag, recettes)
       searchRecipes()
@@ -46,9 +49,9 @@ const tagUnselected = document.querySelectorAll('.tagSelected')
       finalFilter(arrayTags, searchRecipes())
     }else if(arrayTags.length > 1){
       displayListTag(selectTag, result)
-      finalFilter([arrayTags[0]], searchRecipes())
+      finalFilter([arrayTags[0]], arrayData[0])
       for(let i = 1; i < arrayTags.length; i++){
-        finalFilter([arrayTags[i]], result)
+        finalFilter([arrayTags[i]], arrayData[i])
       }
     }
   })

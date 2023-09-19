@@ -20,6 +20,7 @@ const app = () => {
   // e.target.texContent = nom du produit sélectionné
   // el.id.substring(5) = listeAppareils => on supprime 'liste' et on garde 'Appareils'
   let arrayTags =[]
+  let arrayData = []
   // choisir un élément de la liste sans recours au filtre
   function chooseElementListTag() {
     const itemListeSelected = document.querySelectorAll('.choiceProperties')
@@ -39,9 +40,10 @@ const app = () => {
           //creation du tag de l'item selectionné
           createCardTagSelected(e.target.textContent, aeraCardTagSelected, el.id.substring(5))
         }
-        const tag = document.getElementById(`${e.target.textContent}`)
-        closeTag(tag, e.target.textContent, arrayTags)
+        arrayData.push(data)
+        // const tag = document.getElementById(`${e.target.textContent}`)
         finalFilter(arrayTags, data)
+        closeTag(/* tag, */ e.target.textContent, arrayTags, arrayData)
       })
     })
   }

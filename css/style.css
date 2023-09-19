@@ -12,9 +12,9 @@ a {
 }
 /**************************************HEADER****************************************/
 header {
-  height: 40vw;
+  height: 42vw;
   display: block;
-  background-image: url(../assets/backgroundHeader.png);
+  background-image: url(../assets/backgroundHeader.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -30,9 +30,24 @@ header {
   display: flex;
   color: #FFD15B;
   font-family: 'anton', sans-serif;
-  font-size: 3vw;
+  font-size: 44px;
   padding-bottom: 1vw;
   justify-content: center;
+}
+@media (max-width: 426px) {
+  .title {
+    font-size: 17px;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 30px;
+  }
 }
 .searchbar {
   display: flex;
@@ -145,7 +160,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   border: 0;
-  font-family: 'manrope', sans-serif;
+  font-family: 'Manrope', sans-serif;
   padding-inline: 0;
   min-width: 150px;
   min-height: 25px;
@@ -158,11 +173,11 @@ main {
   font-size: 2vw;
   font-weight: 500;
 }
-.collapseOne {
+#btnCollapseOne {
   border-top-left-radius: 1vw;
   border-top-right-radius: 1vw;
 } 
-.collapseThree {
+#btnCollapseThree {
   border-bottom-right-radius: 1vw;
   border-bottom-left-radius: 1vw;
 }
@@ -245,7 +260,7 @@ main {
   flex-direction: column;
   position: relative;
   min-height: 36px;
-  height: 4vw;
+  height: auto;
 }
 .tagSelected {
   width: 100%;
