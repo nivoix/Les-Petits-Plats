@@ -35,6 +35,7 @@ mainInput.addEventListener('input', () => {
     }
   } else if(mainInput.value.length === 0 ) {
     msgInfo.textContent = ""
+    messageErreur.style.display = 'none'
     createAllCardRecette(recettes, areaCard);
     nbTotalRecettes(recettes);
   }else msgInfo.textContent = "Les caractères spéciaux et les chiffres ne sont pas autorisés"
