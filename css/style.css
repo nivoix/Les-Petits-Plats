@@ -34,21 +34,7 @@ header {
   padding-bottom: 1vw;
   justify-content: center;
 }
-@media (max-width: 426px) {
-  .title {
-    font-size: 17px;
-  }
-}
-@media (min-width: 426px) and (max-width: 768px) {
-  .title {
-    font-size: 24px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .title {
-    font-size: 30px;
-  }
-}
+
 .searchbar {
   display: flex;
   margin: 0;
@@ -78,7 +64,7 @@ header {
 }
 .saisie {
   padding: 0;
-  font-size: 16px;
+  font-size: 22px;
   width: 92%;
   border: 0;
   outline: none;
@@ -87,12 +73,15 @@ header {
   margin-top: 5vw;
   margin-bottom: 5vw;
   padding-bottom: 3px;
+  padding-inline-start: 2px;
 }
 .msgInfo {
-  margin-inline-start: 13vw;
+  margin-inline-start: 17vw;
   color: white;
-  font-size: 10px;
+  padding-top: 2px;
+  font-size: 18px;
 }
+
 /***********************************************************/
 main {
   top: -2vw;
@@ -104,7 +93,7 @@ main {
 /*************************TAGS**********************************/
 .ligneTags {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 0.7vw;
   height: auto;
   align-items: center;
@@ -123,12 +112,12 @@ main {
 }
 .optionsFiltre {
   display: flex;
-  gap: 2px;
-  width: 57vw;
+  gap: 1vw;
+  width: 66vw;
   height: auto;
   margin-top: 1vw;
-  margin-inline-start: 5vw;
-  justify-content: space-between;
+  margin-inline-start: 2vw;
+  justify-content: flex-start;
   align-items: flex-start;
   
 }
@@ -259,16 +248,17 @@ main {
   margin-top: 1vw;
   flex-direction: column;
   position: relative;
-  min-height: 36px;
   height: auto;
 }
 .tagSelected {
   width: 100%;
-  height: 6vw;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   border-radius: 1vw;
+  padding-inline-start: 1vw;
+  min-height: 25px;
+  height: 4vw;
 }
 .close {
   background-image: url(../assets/close_x.png);
@@ -278,6 +268,8 @@ main {
   width: 10px;
   height: 10px;
   cursor: pointer;
+  margin-inline-end: 1vw;
+  margin-inline-start: auto;
 }
 /************************************Card Recette**********************************/
 
@@ -374,4 +366,75 @@ color: #1B1B1B;
   margin-bottom: 5vw;
   padding-top: 3vw;
   padding-inline: 4vw;
+}
+@media (max-width: 425px) {
+  .title {
+    font-size: 17px;
+  }
+  .msgInfo {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    width: fit-content;
+    font-size: 10px;
+  }
+  .msgInfoInput {
+    font-size: 10px;
+  }
+  .saisie {
+    font-size: 14px;
+  }
+  .cardRecette {
+    width: 80%;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+  .msgInfo, .msgInfoInput {
+    font-size: 12px;
+  }
+  .saisie {
+    font-size: 18px;
+  }
+  .ligneTags {
+    flex-direction: column-reverse;
+  }
+  .optionsFiltre {
+    flex-direction: column;
+    width: max-content;
+    margin-inline: auto;
+  }
+  .accordion-button, #collapseOne, #collapseTwo, #collapseThree, .elementSelected {
+    min-width: 130px;
+  }
+  #Ingredient, #Appareils, #Ustensils {
+    flex-direction: row;
+    gap: 1vw;
+    align-items: flex-start
+  }
+  #collapseOne, #collapseTwo, #collapseThree {
+    top: 0;
+    border-radius: 10px
+  }
+  .listElementSelectedOfIngredient, .listElementSelectedOfAppareils, .listElementSelectedOfUstensils {
+    margin-top: 0;
+  }
+  .cardRecette {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    height: 44vw;
+  }
+  
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 30px;
+  }
+  .cardRecette {
+    width: 40%;
+  }
 }
