@@ -10,6 +10,7 @@ msgInfoInput.className= "msgInfoInput"
 ligneTag.appendChild(msgInfoInput)
 const selectTag = document.querySelectorAll('.accordion-item')
 const regexp = new RegExp('^[a-zA-Z _-]+$')
+
 // filtrer la liste des tags en fonction de la saisie de l'input
 function filterListeTag(property, areaListe, nameProperty) {
   let inputSearch = document.getElementById(`search${nameProperty}`)
@@ -34,7 +35,6 @@ export { filterListeTag }
 // Suppression du tag
 function closeTag(/* tag, */ choiceName, arrayTags, arrayData) {
 const close = document.getElementById(`close${choiceName}`)
-// const tagUnselected = document.querySelectorAll('.tagSelected')
   close.addEventListener('click', (e) => {
     const tag = document.getElementById(`${e.target.id.substring(5)}`)
     const indexTag = arrayTags.indexOf(tag.id);

@@ -17,10 +17,9 @@ const main = document .querySelector('main')
 messageErreur.className ='messageErreur';
 messageErreur.style.display ='none'
 main.insertBefore(messageErreur, ligneTag)
-// areaCard.appendChild(messageErreur);
 
 
-//filtrer les recettes en fonction de l'input principal et des tags
+//filtrer les recettes en fonction de l'input principal
 const mainInput = document.querySelector('#search')
 mainInput.addEventListener('input', () => {
   if(regexp.test(mainInput.value)) {
@@ -40,8 +39,8 @@ mainInput.addEventListener('input', () => {
     nbTotalRecettes(recettes);
   }else msgInfo.textContent = "Les caractères spéciaux et les chiffres ne sont pas autorisés"
 })
+
   //recherche des recettes correspondantes à la saisie de l'input principale
-  
   function searchRecipes() {
     const searchTerm = mainInput.value.toLowerCase();
     const foundRecipes = searchRecipesFor(searchTerm);
@@ -70,17 +69,13 @@ mainInput.addEventListener('input', () => {
   export { resultInput };
 
   function searchRecipesFor(searchTerm) {
-    
     let tabRecipe = [];
-
     for(let i = 0 ; i <recettes.length ; i ++) {
       let recette = recettes[i];
-
       if (searchTermFoundInRecette(recette, searchTerm)) {
         tabRecipe.push(recette);
       }
     }
-    
     return tabRecipe;
   }
   
@@ -88,7 +83,6 @@ mainInput.addEventListener('input', () => {
     const foundInTitle = recette.name.toLowerCase().includes(searchTerm);
     const foundInDescription = recette.description.toLowerCase().includes(searchTerm);
     const foundInIngredient = recette.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(searchTerm));
-    
     return foundInTitle || foundInDescription || foundInIngredient;
   }
 
