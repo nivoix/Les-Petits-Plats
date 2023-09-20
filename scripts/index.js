@@ -41,7 +41,6 @@ const app = () => {
           createCardTagSelected(e.target.textContent, aeraCardTagSelected, el.id.substring(5))
         }
         arrayData.push(data)
-        // const tag = document.getElementById(`${e.target.textContent}`)
         finalFilter(arrayTags, data)
         closeTag( e.target.textContent, arrayTags, arrayData)
       })

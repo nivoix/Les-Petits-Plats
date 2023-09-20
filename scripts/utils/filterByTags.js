@@ -6,6 +6,7 @@ import { nbTotalRecettes } from "./countNbTotalrecettes.js"
 const selectTag = document.querySelectorAll('.accordion-item')
 const areaCard = document.querySelector('.carteRecette')
 let result 
+
   // filtrer les recettes avec les Tags
 function finalFilter(value, finalRecipes) {
   value.every((tag) => {

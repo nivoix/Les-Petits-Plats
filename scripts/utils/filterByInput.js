@@ -17,7 +17,6 @@ const main = document .querySelector('main')
 messageErreur.className ='messageErreur';
 messageErreur.style.display ='none'
 main.insertBefore(messageErreur, ligneTag)
-// areaCard.appendChild(messageErreur);
 
 
 //filtrer les recettes en fonction de l'input principal et des tags
@@ -40,6 +39,7 @@ mainInput.addEventListener('input', () => {
     nbTotalRecettes(recettes);
   }else msgInfo.textContent = "Les caractères spéciaux et les chiffres ne sont pas autorisés"
 })
+
   //recherche des recettes correspondantes à la saisie de l'input principale
   function searchRecipes() {
     const searchTerm = mainInput.value.toLowerCase()
